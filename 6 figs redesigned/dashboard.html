@@ -1,0 +1,269 @@
+<?php
+session_start();
+if(!isset($_SESSION['unique_id'])){
+    header('Location: login.php');
+}else{
+    ?>
+<?php
+    include("config/profile-c.php");
+?>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/332dceecb5.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="dashboard.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+    <div class="dashboard">
+        <div class="dashboard-house">
+            <div class="dashboard-child-1">
+                <div class="dashboard-child-1-child">
+                    <h1>6figures</h1>
+                    
+                    <p><i class="fa-sharp fa-solid fa-bullhorn"></i> &nbsp; <a href="">News</a></p>
+                    <!-- <p><i class="fas fa-regular fa-book"></i> <a href="">Lecture Room</a>&nbsp;</p> -->
+                    <p><i class="fa-brands fa-trade-federation"></i> <a href="">Signal</a>&nbsp;</p>
+                    <p><i class="fa-solid fa-user"></i> <a href="">Profile</a>&nbsp;</p>
+                    <p><i class="fas fa-regular fa-wallet"></i>&nbsp; <a href="">Withdraw</a></p>
+                    <p><i class="fas fa-regular fa-clock-rotate-left"></i></i>&nbsp; <a href="">Wallet History</a></p>
+                    <p><i class="fas fa-thin fa-arrow-rotate-left"></i>&nbsp;<a href="">Referral</a>&nbsp;</p>
+                    <p><i class="fa-solid fa-arrow-right-arrow-left"></i>&nbsp;<a href="">Buy/Sell</a></p>
+                   <p><i class="fa-solid fa-right-from-bracket"></i>&nbsp;<a href="">Logout</a></p>
+                   <!-- <div class="contact-card">
+                     <img src="i.jpg" alt="">
+                     <h1>mubarak</h1>
+                     <p>mubarak@gmail.com</p>
+                   </div> -->
+                </div>
+            </div>
+            <div class="dashboard-child-2">
+                <div class="dashboard-child-2-child">
+                    <div class="dashboard-child-2-text-house">
+                        <h1>Welcome To Dashboard</h1>
+                        <p>24/8/2002</p>
+                    </div>
+                    <div class="card-1">
+                        <div class="card-1-intro">
+                            <div>
+                                <h1>At The Glace</h1>
+                                <p>Welcome Back</p>
+                            </div>
+                            <P>Tiamiyu Mubarak</P>
+                        </div>
+                        <div class="info-house">
+                            <div class="info info-1">
+                                <h3>Balance</h3>
+                                <p>9,000</p>
+                            </div>
+                            <div class="info info-2">
+                                <h3>Withdrawn</h3>
+                                <p>1,000</p>
+                            </div>
+                            <div class="info info-3">
+                                <h3>Available Balance</h3>
+                                <p>8,000,000</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div  class="dashboard-child-2-child-2">
+                    <div class="child-2-a"></div>
+                    <div class="child-2-b"></div>
+                </div>
+    
+                <div class="ref">
+                    <h1>Your Courses</h1>
+                    <div class="ref-house">
+                        <div class="ref-box ref-box-1">
+                            <div><img src="" alt=""></div>
+                            <div>
+                               <h2>Refferral</h2>
+                               <p>16</p>
+                            </div>
+                          </div>
+                        <div class="ref-box ref-box-2">
+                          <div><img src="" alt=""></div>
+                          <div>
+                             <h2>Enrolled Courses</h2>
+                             <p>17</p>
+                          </div>
+                        </div>
+                        <div class="ref-box ref-box-3">
+                            <div><img src="" alt=""></div>
+                            <div>
+                               <h2>Completed Courses</h2>
+                               <p>17</p>
+                            </div>
+                          </div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+
+    <!-- <div class="box1">
+   <div class="box2">
+      <div class="side-bar">
+        <div class="menu">
+            <div class="head">
+                <p>6figures</p>
+            </div>
+            <ul class="side-bar-list">
+                <a class="list" href="newspage.php">
+                    <li>News</li>
+                </a>
+                <a class="list" href="courses1.php">
+                    <li>Lecture Room</li>
+                </a>
+                <a class="list" href="signal.php">
+                    <li>Signal</li>
+                </a>
+                <a class="list" href="
+                profile.php">
+                    <li>Profile</li>
+                </a>
+                <a class="list" href="withdraw.php">
+                    <li>Withdraw</li>
+                </a>
+                <a class="list" href="history.php">
+                    <li>Withdrawal History</li>
+                </a>
+                <a class="list" href="referralink.php">
+                    <li>Referral</li>
+                </a>
+                <a class="list" href="#">
+                    <li>Buy/Sell</li>
+                </a>
+                <a class="list" href="config/logout.php">
+                    <li>Logout</li>
+                </a>
+            </ul>
+      </div>
+      </div>
+
+      <div class="box3">
+
+      <div class="navbar">
+            <div class="menu-menu">
+                <img class="image" src="pictures/fig27.webp" width="40%" height="75px">
+            <div class="navbar-list">
+                <a href="config/logout.php" class="btn">Logout</a>
+            </div>
+            </div>
+      </div>
+
+
+      <div class="container">
+        <div class="content">
+            <div class="cards">
+                <div class="card card1">
+                    <div class="username">
+                        <h2><?php echo $firstname.' '.$secondname;?></h2>
+                    </div>
+                    <div class="icon">
+                        <h1>BALANCE</h1>
+                        <p>
+                        <?php echo number_format($main_balance) ?>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="icon">
+                    <h1>Amount Withdraw</h1>
+                    </div>
+                    <div class="box">
+                        <p>
+                        <?php echo number_format($total_withdraw) ?>
+                        </p>
+                    </div>
+                </div> 
+                <div class="card">
+                    <div class="icon">
+                    <h1>Money at hand</h1>
+                    </div>
+                    <div class="box">
+                       <P>
+                       <?php echo number_format($balancex) ?>
+                       </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="icon">
+                    <h1>Referral</h1>
+                    </div>
+                    <div class="font">
+                    <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div class="box">
+                       <h6><?php include("config/ref_count.php");?></h6>
+                </div>
+            </div>
+
+            <div class="card">
+                    <div class="icon">
+                    <h1>Enrolled Course</h1>
+                    </div>
+                    <div class="font">
+                    <i class="fa-solid fa-user-graduate"></i>
+                    </div>
+                    <div class="box">
+                       <h6>17<p/h6>
+                </div>
+            </div>
+
+            <div class="card">
+                    <div class="icon">
+                    <h1>Completed Course</h1>
+                    </div>
+                    <div class="font">
+                    <i class="fa-duotone fa-balloons"></i>
+                    </div>
+                    <div class="box">
+                       <h6>17</h6>
+                </div>
+            </div>
+
+            <div class="content-2">
+                <div class="recent-payment"></div>
+                <div class="new-student"></div>
+            </div>
+        </div>
+      </div>
+   
+</div>
+
+</div> -->
+
+
+
+      
+
+
+
+   
+
+      
+
+
+
+
+
+    
+</body>
+</html>
+    <?php
+}
+?>
